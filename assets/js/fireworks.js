@@ -1,4 +1,3 @@
-
 window.human = false;
 
 var canvasEl = document.querySelector('.fireworks');
@@ -131,6 +130,6 @@ function autoClick() {
   anime({duration: 200}).finished.then(autoClick);
 }
 
-autoClick()；
+autoClick();
 setCanvasSize();
 window.addEventListener('resize', setCanvasSize, false);
