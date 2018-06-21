@@ -2298,23 +2298,26 @@ a.tag--small,
     height: 100%;
     margin-top: 0; }
 
-#backtoTop {
+
+#totop {
     background-color: #eee;
     border-radius: 100%;
     bottom: 5%;
     height: 48px;
     width: 48px;
+    top: 85%;
+    left: 16%;
     position: fixed;
-    top: 40%;
-    left: 87%;
+    right: -100px;
     z-index: 99;
     -webkit-transition: 0.5s;
        -moz-transition: 0.5s;
             transition: 0.5s;
-    &.display {right: 10px;}
 }
 
-.percentage {
+#totop.display {right: 10px;}
+
+#totop-percent {
     font-size: 16px;
     height: 48px;
     line-height: 48px;
@@ -2324,16 +2327,18 @@ a.tag--small,
     width: 48px;
     color: #555;
     cursor: pointer;
-    &:before {content:attr(data-percent);}
-/*    &:hover:before {
-        display: inline-block;
-        font: normal normal normal 14px/1 FontAwesome;
-        font-size: inherit;
-        text-rendering: auto;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        content: "\f176";
-    }*/
+}
+
+#totop-percent:before {content:attr(data-percent);}
+
+#totop-percent:hover:before {
+    display: inline-block;
+    font: 14px/1em FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: "\f176";
 }
 
 
