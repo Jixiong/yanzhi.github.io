@@ -2305,8 +2305,8 @@ a.tag--small,
     bottom: 5%;
     height: 48px;
     width: 48px;
-    top: 85%;
-    left: 16%;
+    top: 800px;
+    left: 280px;
     position: fixed;
     right: -100px;
     z-index: 99;
@@ -2352,6 +2352,12 @@ a.tag--small,
     height: 100%;
     display: inline-block;
     box-sizing: border-box;
+}
+
+
+.busuanzi_inline-li{
+    color: #C0C0C0;  
+    font-size:13px;
 }
 
 .color-01 { color: #FF1461; } /* Red */
