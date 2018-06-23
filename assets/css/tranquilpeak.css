@@ -528,7 +528,7 @@ blockquote {
   position: fixed;
   top: 0;
   background: url("/assets/images/cover.jpg");
-  background-size: 170% 100%;
+  background-size: 190% 100%;
   overflow: auto;
   z-index: 20;
   transition: transform .25s ease-in-out;
