@@ -57,7 +57,7 @@ body {
   padding: 0;
   background: white;
   font-family: "Open Sans", sans-serif;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   line-height: 1.85em;
   letter-spacing: 0.01em;
   -webkit-font-smoothing: subpixel-antialiased;
@@ -528,7 +528,7 @@ blockquote {
   position: fixed;
   top: 0;
   background: url("/assets/images/cover.jpg");
-  background-size: 19e0% 100%;
+  background-size: 190% 100%;
   overflow: auto;
   z-index: 20;
   transition: transform .25s ease-in-out;
