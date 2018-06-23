@@ -46,5 +46,4 @@ for i in (1..6) {
     }
 }
 
-.toc-child { display: none; }
 .toc-item.active .toc-child { display: block; }
