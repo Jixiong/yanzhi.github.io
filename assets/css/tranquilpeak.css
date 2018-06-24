@@ -338,7 +338,7 @@ blockquote {
 
 @media only screen and (min-width: 1024px) {
   #bottom-bar[data-behavior="1"] {
-    width: calc(100% - 250px - 170px * 2);
+    width: calc(100% - 250px - 190px * 2);
     left: 310px; }
     #bottom-bar[data-behavior="1"].pushed {
       -webkit-transform: translate3d(250px, 0, 0);
@@ -534,7 +534,7 @@ blockquote {
   transition: transform .25s ease-in-out;
   -webkit-transition: -webkit-transform .25s ease-in-out; }
   #sidebar .sidebar-profile {
-    color: #ebebeb;
+    color: #1c5c92;
     text-align: center;
     padding-top: 18px;
     margin-bottom: 15px; }
