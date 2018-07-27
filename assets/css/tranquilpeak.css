@@ -1638,7 +1638,7 @@ a.link-unstyled a.link, a.link-unstyled a.link:hover, a.link-unstyled a.link:act
 
 .pagination-bar {
   height: auto;
-  width: 100%;
+  width: 80%;
   height: 60px; }
   .pagination-bar .pagination {
     height: 60px;
@@ -1894,7 +1894,7 @@ a.link-unstyled a.link, a.link-unstyled a.link:hover, a.link-unstyled a.link:act
 
 .postShorten {
   position: relative;
-  width: 100%;
+  width: 80%;
   display: inline-block;
   vertical-align: top; }
   .postShorten .postShorten-header .postShorten-title {
