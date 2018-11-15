@@ -1,0 +1,523 @@
+
+    <!DOCTYPE html>
+    <html lang="">
+    
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="衍之不觉得自己废话比较多">
+    <title>Summary of several stream computing frameworks - 衍之不觉得自己废话比较多</title>
+    <meta name="author" content="衍之">
+    
+        <link rel="icon" href="/assets/images/icone.jpg">
+    
+    
+    <meta name="description" content="Just save the name of the site and study it later (XD). A lot of stream computing frameworks and platforms have emerged in the industry, and here is a brief summary.The first category is the commercia">
+<meta name="keywords" content="Catelogues,Flow calculation,storm">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="Summary of several stream computing frameworks">
+<meta property="og:url" content="http://www.yansera.com/2018/07/30/Summary of several stream computing frameworks/index.html">
+<meta property="og:site_name" content="衍之不觉得自己废话比较多">
+<meta property="og:description" content="Just save the name of the site and study it later (XD). A lot of stream computing frameworks and platforms have emerged in the industry, and here is a brief summary.The first category is the commercia">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-11-15T06:34:35.741Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Summary of several stream computing frameworks">
+<meta name="twitter:description" content="Just save the name of the site and study it later (XD). A lot of stream computing frameworks and platforms have emerged in the industry, and here is a brief summary.The first category is the commercia">
+    
+    
+    
+        <meta property="og:image" content="/assets/images/ayano.jpg"/>
+    
+    
+        <meta property="og:image" content="/2018/07/30/Summary of several stream computing frameworks/https:/images7.alphacoders.com/344/344627.jpg"/>
+        <meta class="swiftype" name="image" data-type="enum" content="http://www.yansera.com/2018/07/30/Summary of several stream computing frameworks/https://images7.alphacoders.com/344/344627.jpg" />
+    
+    
+        <meta property="og:image" content="/2018/07/30/Summary of several stream computing frameworks/https:/images7.alphacoders.com/567/567688.jpg"/>
+        <meta class="swiftype" name="image" data-type="enum" content="http://www.yansera.com/2018/07/30/Summary of several stream computing frameworks/https://images7.alphacoders.com/567/567688.jpg" />
+    
+    
+    <!--STYLES-->
+    <link rel="stylesheet" href="/assets/css/font-awesome.css">
+    <link rel="stylesheet" href="/assets/css/jquery.fancybox.css">
+    <link rel="stylesheet" href="/assets/css/jquery.fancybox-thumbs.css">
+    <link rel="stylesheet" href="/assets/css/tranquilpeak.css">
+    <link rel="stylesheet" href="/assets/css/anime.css">
+    <link rel="stylesheet" href="/assets/css/toc.css">
+    <!--STYLES END-->
+    
+</head>
+
+
+        <body>
+            <canvas class="fireworks"></canvas>
+            <div id="blog">
+                <header id="header" data-behavior="1">
+    <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+    <h1 class="header-title">
+        <a class="header-title-link" href="/ ">衍之不觉得自己废话比较多</a>
+    </h1>
+    
+        
+            <a  class="header-right-icon st-search-show-outputs"
+                href="#search">
+        
+                <i class="fa fa-lg fa-search"></i>
+            </a>
+    
+</header>
+                    <nav id="sidebar" data-behavior="1">
+    
+        <div class="sidebar-profile">
+            <a href="/#about">
+                
+                    <img class="sidebar-profile-picture" src="/assets/images/ayano.jpg"/>
+                
+            </a>
+            <span class="sidebar-profile-name">衍之</span>
+        </div>
+    
+    
+        <ul class="sidebar-buttons">
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/ "
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+                    <span class="sidebar-button-desc">首页</span>
+                </a>
+        </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/all-categories"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+                    <span class="sidebar-button-desc">条目</span>
+                </a>
+        </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/all-tags"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+                    <span class="sidebar-button-desc">标签</span>
+                </a>
+        </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/all-archives"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-bars"></i>
+                    <span class="sidebar-button-desc">归档</span>
+                </a>
+        </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link st-search-show-outputs"
+                         href="#search"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-search"></i>
+                    <span class="sidebar-button-desc">搜索</span>
+                </a>
+        </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/about"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-info-circle"></i>
+                    <span class="sidebar-button-desc">关于</span>
+                </a>
+        </li>
+        
+    </ul>
+    
+        <ul class="sidebar-buttons">
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link " href="https://github.com/jixiong" target="_blank">
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-github-square"></i>
+                    <span class="sidebar-button-desc">GitHub</span>
+                </a>
+        </li>
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link " href="mailto:jixiong@qq.com" target="_blank">
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-envelope-o"></i>
+                    <span class="sidebar-button-desc">邮件</span>
+                </a>
+        </li>
+        
+    </ul>
+    
+        <ul class="sidebar-buttons">
+        
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/atom.xml"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
+                    <span class="sidebar-button-desc">RSS</span>
+                </a>
+        </li>
+        
+    </ul>
+    
+</nav>
+
+                        
+        <div class="post-header-cover
+                    text-center
+                    post-header-cover--full"
+             style="background-image:url('https://images7.alphacoders.com/567/567688.jpg');"
+             data-behavior="1">
+            
+        </div>
+
+                            <div id="main" data-behavior="1" class="hasCover
+                        hasCoverMetaOut
+                        ">
+                                
+<article class="post" itemscope itemType="http://schema.org/BlogPosting">
+
+    
+    
+        <div class="post-header main-content-wrap text-center">
+    
+        <h1 class="post-title" itemprop="headline">
+            Summary of several stream computing frameworks
+        </h1>
+    
+    <div class="post-meta">
+    <time itemprop="datePublished" content="Mon Jul 30 2018 17:32:36 GMT+0200">
+	
+		    2018年07月30日
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/distributed-system/">distributed system</a>
+
+
+    
+</div>
+        
+           <li class="busuanzi_inline-li">
+            <span id="busuanzi_value_page_pv"></span> views
+        </li>
+     
+</div>
+    
+    
+        <div id="toc">
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#A-lot-of-stream-computing-frameworks-and-platforms-have-emerged-in-the-industry-and-here-is-a-brief-summary"><span class="toc-text">A lot of stream computing frameworks and platforms have emerged in the industry, and here is a brief summary.</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#The-first-category-is-the-commercial-level-flow-computing-platform-which-is-as-follows"><span class="toc-text">The first category is the commercial level flow computing platform, which is as follows:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#The-second-category-is-open-source-stream-computing-framework-which-is-represented-by-the-platforms-as-follows"><span class="toc-text">The second category is open-source stream computing framework, which is represented by the platforms as follows:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#The-third-category-is-the-flow-computing-framework-for-companies-to-support-its-own-business-development-Although-it-is-not-open-source-there-are-many-learning-materials-available-for-learning-which-are-represented-as-follows"><span class="toc-text">The third category is the flow computing framework for companies to support its own business development. Although it is not open source, there are many learning materials available for learning, which are represented as follows:</span></a></li></ol></li></ol>
+        </div>
+    
+    <div class="post-content markdown" itemprop="articleBody">
+        <div class="main-content-wrap">
+            <p>Just save the name of the site and study it later (XD).</p>
+<h1 id="A-lot-of-stream-computing-frameworks-and-platforms-have-emerged-in-the-industry-and-here-is-a-brief-summary"><a href="#A-lot-of-stream-computing-frameworks-and-platforms-have-emerged-in-the-industry-and-here-is-a-brief-summary" class="headerlink" title="A lot of stream computing frameworks and platforms have emerged in the industry, and here is a brief summary."></a>A lot of stream computing frameworks and platforms have emerged in the industry, and here is a brief summary.</h1><h2 id="The-first-category-is-the-commercial-level-flow-computing-platform-which-is-as-follows"><a href="#The-first-category-is-the-commercial-level-flow-computing-platform-which-is-as-follows" class="headerlink" title="The first category is the commercial level flow computing platform, which is as follows:"></a>The first category is the commercial level flow computing platform, which is as follows:</h2><p>IBM InfoSphere Streams: Business-level and high-level computing platform to help users’ application programs (app) quickly sort out, analyze and link information from thousands of real-time sources.<br>Http://www-03.ibm.com/software/products/cn/zh/infosphere-streams/;<br>IBM Stream Base: Another Business Flow Computing System developed by IBM for use in financial and government sectors<br>Http://<a href="http://www.streambase.com/" target="_blank" rel="noopener">www.streambase.com/</a>. </p>
+<h2 id="The-second-category-is-open-source-stream-computing-framework-which-is-represented-by-the-platforms-as-follows"><a href="#The-second-category-is-open-source-stream-computing-framework-which-is-represented-by-the-platforms-as-follows" class="headerlink" title="The second category is open-source stream computing framework, which is represented by the platforms as follows:"></a>The second category is open-source stream computing framework, which is represented by the platforms as follows:</h2><p>Twitter Storm: Free and open source distributed real-time computing system, which can handle large-scale stream data simply, efficiently and reliably: <a href="http://storm-project.net/" target="_blank" rel="noopener">http://storm-project.net/</a> ;<br>Yahoo! S4 (Simple Scalable Streaming System): an open source streaming computing platform, which is universal, distributed, scalable, partitioned, fault-tolerant, pluggable streaming system. Http://incubator.apache.org/s4/;</p>
+<h2 id="The-third-category-is-the-flow-computing-framework-for-companies-to-support-its-own-business-development-Although-it-is-not-open-source-there-are-many-learning-materials-available-for-learning-which-are-represented-as-follows"><a href="#The-third-category-is-the-flow-computing-framework-for-companies-to-support-its-own-business-development-Although-it-is-not-open-source-there-are-many-learning-materials-available-for-learning-which-are-represented-as-follows" class="headerlink" title="The third category is the flow computing framework for companies to support its own business development. Although it is not open source, there are many learning materials available for learning, which are represented as follows:"></a>The third category is the flow computing framework for companies to support its own business development. Although it is not open source, there are many learning materials available for learning, which are represented as follows:</h2><p>Facebook Puma: Facebook uses Puma and HBase to process real-time data.<br>DStream: Baidu is developing a general real-time data stream computing system belonging to Baidu.<br>Galactic flow data processing platform: a universal data stream real-time computing system developed by Taobao;<br>Super Mario: a high-performance data stream processing framework developed based on Erlang language and Zookeeper module.<br>Moreover, companies like SQLstream, which specialize in real-time large data stream processing services, have also sprung up in the industry.</p>
+
+            
+                
+
+            
+        </div>
+    </div>
+    <div class="post-footer main-content-wrap">
+        
+            <div class="post-footer-tags">
+                <span class="text-color-light text-small">TAGGED IN</span><br/>
+                
+    <a class="tag tag--primary tag--small t-link" href="/tags/Catelogues/">Catelogues</a> <a class="tag tag--primary tag--small t-link" href="/tags/Flow-calculation/">Flow calculation</a> <a class="tag tag--primary tag--small t-link" href="/tags/storm/">storm</a>
+
+            </div>
+        
+        <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--disabled">
+                
+                    <i class="fa fa-angle-left"></i>
+                    <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
+                </a>
+            </li>
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2018/06/24/Sooyalo – How to Pick up a Suitable (Gorgeous)/" data-tooltip="Sooyalo – How to Pick up a Suitable (Gorgeous) Theme ~">
+                
+                    <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions"  href="#btn-open-shareoptions">
+                <i class="fa fa-share-alt"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" data-tooltip="分享至Google+" href="https://plus.google.com/share?url=http://www.yansera.com/2018/07/30/Summary of several stream computing frameworks/">
+                <i class="fa fa-google-plus"></i>
+            </a>
+        </li>
+       
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" data-tooltip="分享至Twitter" href="https://twitter.com/intent/tweet?text=http://www.yansera.com/2018/07/30/Summary of several stream computing frameworks/">
+                <i class="fa fa-twitter"></i>
+            </a>
+        </li>
+
+         <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" data-tooltip="分享至新浪微博" href="http://www.jiathis.com/send/?webid=tsina&amp;appkey=&amp;uid=1850331&amp;url=http://www.yansera.com/2018/07/30/Summary of several stream computing frameworks/&amp;title=Summary of several stream computing frameworks">
+                <i class="fa fa-weibo"></i>
+            </a>
+        </li>
+
+        
+            <li class="post-action">
+                <a class="post-action-btn btn btn--default" href="#disqus_thread">
+                    <i class="fa fa-comment-o"></i>
+                </a>
+            </li>
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#">
+            
+                <i class="fa fa-list"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+        
+            <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+        
+    </div>
+    <div id="totop" title="to_top">
+    <canvas id="totop-canvas" width="48" height="48"></canvas>
+    <div id="totop-percent"></div>
+</div>
+    
+</article>
+
+
+
+
+
+                                    <footer id="footer" class="main-content-wrap">
+    <span class="copyrights">
+        Copyrights &copy; 2018 衍之. All Rights Reserved.
+    </span>
+    <p>Themed by <a href="https://github.com/Jixiong/hexo-theme-Sooyalo">Sooyalo</a> | Powered by <a href="https://hexo.io/">Hexo</a>.</p>
+    </br>
+    
+         <li class="busuanzi_inline-li">
+            <span id="busuanzi_value_page_pv"></span> views
+        </li>
+    
+</footer>
+
+                            </div>
+                            
+                                <div id="bottom-bar" class="post-bottom-bar" data-behavior="1">
+                                    <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--disabled">
+                
+                    <i class="fa fa-angle-left"></i>
+                    <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
+                </a>
+            </li>
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2018/06/24/Sooyalo – How to Pick up a Suitable (Gorgeous)/" data-tooltip="Sooyalo – How to Pick up a Suitable (Gorgeous) Theme ~">
+                
+                    <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions"  href="#btn-open-shareoptions">
+                <i class="fa fa-share-alt"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" data-tooltip="分享至Google+" href="https://plus.google.com/share?url=http://www.yansera.com/2018/07/30/Summary of several stream computing frameworks/">
+                <i class="fa fa-google-plus"></i>
+            </a>
+        </li>
+       
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" data-tooltip="分享至Twitter" href="https://twitter.com/intent/tweet?text=http://www.yansera.com/2018/07/30/Summary of several stream computing frameworks/">
+                <i class="fa fa-twitter"></i>
+            </a>
+        </li>
+
+         <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" data-tooltip="分享至新浪微博" href="http://www.jiathis.com/send/?webid=tsina&amp;appkey=&amp;uid=1850331&amp;url=http://www.yansera.com/2018/07/30/Summary of several stream computing frameworks/&amp;title=Summary of several stream computing frameworks">
+                <i class="fa fa-weibo"></i>
+            </a>
+        </li>
+
+        
+            <li class="post-action">
+                <a class="post-action-btn btn btn--default" href="#disqus_thread">
+                    <i class="fa fa-comment-o"></i>
+                </a>
+            </li>
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#">
+            
+                <i class="fa fa-list"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+                                </div>
+                                <div id="share-options-bar" class="share-options-bar" data-behavior="1">
+    <ul class="share-options">
+        <li class="share-option">
+            <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=http://www.yansera.com/2018/07/30/Summary of several stream computing frameworks/">
+                <i class="fa fa-google-plus"></i><span class="">到 Google Plus 分享</span>
+            </a>
+        </li>
+        <li class="share-option">
+            <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://www.yansera.com/2018/07/30/Summary of several stream computing frameworks/">
+                <i class="fa fa-facebook-official"></i><span>到 Facebook 分享</span>
+            </a>
+        </li>
+        <li class="share-option">
+            <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=http://www.yansera.com/2018/07/30/Summary of several stream computing frameworks/">
+                <i class="fa fa-twitter"></i><span>到 Twitter 分享</span>
+            </a>
+        </li>
+    </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+                                    
+            </div>
+            <div id="about">
+    <div id="about-card">
+        <div id="about-btn-close">
+            <i class="fa fa-remove"></i>
+        </div>
+        
+            <img id="about-card-picture" src="/assets/images/ayano.jpg"/>
+        
+            <h4 id="about-card-name">衍之</h4>
+        
+            <h5 id="about-card-bio"><p>静静地当一个宅√</p>
+</h5>
+        
+        
+            <h5 id="about-card-job">
+                <i class="fa fa-briefcase"></i>
+                <br/>
+                <p>伪宅 &amp; 码农</p>
+
+            </h5>
+        
+        
+            <h5 id="about-card-location">
+                <i class="fa fa-map-marker"></i>
+                <br/>
+                Rouen France
+            </h5>
+        
+    </div>
+</div>
+
+                <div id="cover" style="background-image:url('/assets/images/cover.jpg');"></div>
+
+
+        <script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/"});</script></body>
+        <!--SCRIPTS-->
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="/assets/js/jquery.js"></script>
+<script src="/assets/js/jquery.fancybox.js"></script>
+<script src="/assets/js/jquery.fancybox-thumbs.js"></script>
+<script src="/assets/js/tranquilpeak.js"></script>
+<script src="/assets/js/anime.min.js"></script>
+<script src="/assets/js/fireworks.js"></script>
+<script src="/assets/js/totop.js"></script>
+<script src="/assets/js/toc.js"></script>
+
+<!--SCRIPTS END-->
+
+    <script type="text/javascript">
+        var disqus_shortname = 'izzyliu';
+        (function() {
+            var dsq = document.createElement('script');
+            dsq.type = 'text/javascript';
+            dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+
+
+    <script type="text/javascript">
+        (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+                (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+            e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+        })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+        _st('install','[object Object]','2.0.0');
+    </script>
+
+
+
+    </html>
